@@ -1,0 +1,285 @@
+/*
+ * colors
+ * primary #4cd964
+ * accent #5ac8fa
+ * accent #ff2d55
+ * background #fff
+ * text #222
+ */
+
+/* reset */
+
+* {
+  border-radius: 0;
+  box-sizing: border-box;
+  font-weight: normal;
+  margin: 0;
+  outline: none;
+  padding: 0;
+  user-select: none;
+}
+
+::selection {
+  background: #cbf3b4;
+}
+
+/* global */
+
+body {
+  background: #fff;
+  color: #222;
+  cursor: default;
+  display: flex;
+  flex-direction: column;
+  font: normal 20px/1 -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica,
+    Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+}
+
+.slinky-menu {
+  display: none;
+}
+
+.slinky-menu._active {
+  display: block;
+}
+
+.slinky-menu-open img {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.slinky-menu-close {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.slinky-menu-close img {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  margin: 0 5px 8px;
+}
+
+.slinky-menu__block {
+  position: fixed;
+  transform: translateX(-100%);
+  padding: 10px;
+  background: #fff;
+  z-index: 10000;
+  max-width: 768px;
+  top: 0;
+  transition: all 0.3s;
+  height: 0;
+}
+
+.slinky-menu__block._active {
+  transform: translateX(0);
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+
+.slinky-theme-default {
+  background: #fff;
+}
+.slinky-menu {
+  margin-bottom: 10px;
+}
+
+.slinky-menu ul {
+  margin-left: -1px;
+}
+
+.slinky-menu li {
+  display: block;
+  height: 100px;
+  background: linear-gradient(0deg, rgb(240, 242, 245), rgb(255, 255, 255) 50%, rgb(240, 242, 245) 100%);
+  margin-bottom: 10px;
+}
+
+.slinky-menu li:last-child {
+  margin: 0;
+}
+
+.slinky-theme-default .next::after {
+  display: none;
+}
+
+.slinky-theme-default .back {
+  display: flex;
+  position: absolute;
+  height: 100px;
+}
+
+.slinky-theme-default a:not(.back) {
+  padding: 0 0 0 20px;
+}
+
+.slinky-menu a {
+  display: block;
+  line-height: 100px;
+  text-decoration: none;
+  transition: 200ms;
+}
+
+.slinky-menu a:hover {
+  color: rgba(15, 122, 1, 1);
+}
+
+.slinky-menu a:active {
+  color: rgba(15, 122, 1, 1);
+}
+
+header {
+  align-items: center;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+}
+
+/* components */
+
+.loading {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: 2em;
+  text-align: center;
+}
+
+.loading::before {
+  animation: spinner 1s infinite linear;
+  content: '';
+  border: 2px solid transparent;
+  border-top-color: rgba(15, 122, 1, 1);
+  border-right-color: rgba(15, 122, 1, 1);
+  border-radius: 1em;
+  height: 1.5em;
+  margin-right: 1em;
+  width: 1.5em;
+}
+
+.clothes {
+  background: url('../image/menu-img/clothes.jpg') right center no-repeat;
+}
+
+.accessories {
+  background: url('../image/menu-img/accessories.jpg') right center no-repeat;
+}
+
+.clothes__suit {
+  background: url('../image/menu-img/clothes/suit.jpg') right center no-repeat;
+}
+
+.clothes__shirt {
+  background: url('../image/menu-img/clothes/shirt.jpg') right center no-repeat;
+}
+
+.clothes__pants {
+  background: url('https://akcent-for-men.by/image/cache/catalog/catalog/0-02-05-311d4e383d46353815ee03740e29caf260ed2da2ef789c272e73ef5ea62b3ba1_5e1d7271-150x150w.jpg') right center no-repeat;
+}
+
+.clothes__blazer {
+  background: url('../image/menu-img/clothes/blazer.jpg') right center no-repeat;
+}
+
+.clothes__tricot {
+  background: url('../image/menu-img/clothes/tricot.jpg') right center no-repeat;
+}
+
+.clothes__coat {
+  background: url('../image/menu-img/clothes/coat.jpg') right center no-repeat;
+}
+
+.clothes__jacket {
+  background: url('https://akcent-for-men.by/image/cache/catalog/kurtki/kur-150x150w.jpg') right center no-repeat;
+}
+
+.clothes__cloak {
+  background: url('../image/menu-img/clothes/cloak.jpg') right center no-repeat;
+}
+
+.accessories__galstuk {
+  background: url('../image/menu-img/accessories/galstuk.jpg') right center no-repeat;
+}
+
+.accessories__babochka {
+  background: url('../image/menu-img/accessories/babochka.jpg') right center no-repeat;
+}
+
+.accessories__portmone {
+  background: url('../image/menu-img/accessories/portmone.jpg') right center no-repeat;
+}
+
+.accessories__podtyazhki {
+  background: url('../image/menu-img/accessories/podtyazhki.jpg') right center no-repeat;
+}
+
+.accessories__sharfy {
+  background: url('../image/menu-img/accessories/sharfy.jpg') right center no-repeat;
+}
+
+.accessories__kluchniza {
+  background: url('../image/menu-img/accessories/kluchniza.jpg') right center no-repeat;
+}
+
+.accessories__remen {
+  background: url('../image/menu-img/accessories/remen.jpg') right center no-repeat;
+}
+
+.accessories__zaponki {
+  background: url('../image/menu-img/accessories/zaponki.jpg') right center no-repeat;
+}
+
+.clothes__pants,
+.clothes__jacket {
+  background-size: 100px;
+}
+
+.menu__sale span {
+  color: #ff2d55;
+}
+
+.menu__sale span:hover {
+  color: rgba(15, 122, 1, 1);
+}
+
+.menu__footer {
+  background: linear-gradient(0deg, rgb(240, 242, 245), rgb(255, 255, 255) 50%, rgb(240, 242, 245) 100%);
+  padding: 10px;
+}
+
+.menu__contacts {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.menu__contacts p{
+  display: flex;
+  width: 350px;
+  margin: 20px 20px 0 20px;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.menu__footer .menu__akcent {
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* animations */
+
+@keyframes spinner {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
